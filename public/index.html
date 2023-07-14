@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organizador de Partidas de Futebol</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Organizador de Partidas de Futebol</h1>
+      <h2>Criar Partida</h2>
+      <form action="/partidas" id="criarPartidaForm">
+        <div class="mb-3">
+          <label for="tituloInput" class="form-label">Título:</label>
+          <input name="titulo" type="text" class="form-control" id="tituloInput" required />
+        </div>
+        <div class="mb-3">
+          <label for="localInput" class="form-label">Local:</label>
+          <input name="local" type="text" class="form-control" id="localInput" required />
+        </div>
+        <div class="mb-3">
+          <label for="dataInput" class="form-label">Data:</label>
+          <input name="data" type="date" class="form-control" id="dataInput" required />
+        </div>
+        <div class="mb-3">
+          <label for="horarioInput" class="form-label">Horário:</label>
+          <input name="horario" type="time" class="form-control" id="horarioInput" required />
+        </div>
+        <button type="submit" class="btn btn-primary" onClick="criarPartida()">Criar Partida</button>
+      </form>
+
+      <h2>Lista de Partidas</h2>
+      <ul id="partidasList" class="list-group"></ul>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
